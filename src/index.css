@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-spotify-green: #1DB954;
+  --color-spotify-black: #000000;
+  --color-spotify-dark: #121212;
+  --color-spotify-surface: #181818;
+  --color-spotify-hover: #282828;
+  --color-spotify-border: #282828;
+  
+  --animate-float: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@layer base {
+  body {
+    @apply bg-spotify-black text-white selection:bg-spotify-green/30 selection:text-spotify-green antialiased overflow-hidden;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #4d4d4d;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #777;
+  }
+}
+
+.glass-morphism {
+  @apply bg-black/60 backdrop-blur-xl border border-white/10;
+}
+
+.spotify-gradient {
+  background: linear-gradient(180deg, #222222 0%, #121212 100%);
+}
+
+.glow-on-hover:hover {
+  box-shadow: 0 0 24px rgba(29, 185, 84, 0.4);
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50;
+}

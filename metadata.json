@@ -1,0 +1,8 @@
+{
+  "name": "Groove - Modern Music Streaming",
+  "description": "A high-fidelity, Spotify-inspired music streaming dashboard featuring animated album cards, smooth transitions, and an immersive player UI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
